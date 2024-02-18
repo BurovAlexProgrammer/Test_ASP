@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TestApp.Core.Postgres;
+using TestApp.DAL.Postgres;
 
 #nullable disable
 
-namespace TestApp.Core.Postgres.Migrations
+namespace TestApp.DAL.Postgres.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(PostgresDbContext))]
+    [Migration("20240218134007_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace TestApp.Core.Postgres.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("TestApp.Core.Postgres.Models.AuthorEntity", b =>
+            modelBuilder.Entity("TestApp.DAL.Postgres.Models.AuthorEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,7 +39,7 @@ namespace TestApp.Core.Postgres.Migrations
                     b.ToTable("AuthorEntity");
                 });
 
-            modelBuilder.Entity("TestApp.Core.Postgres.Models.NewsEntity", b =>
+            modelBuilder.Entity("TestApp.DAL.Postgres.Models.NewsEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,9 +61,9 @@ namespace TestApp.Core.Postgres.Migrations
                     b.ToTable("NewsEntity");
                 });
 
-            modelBuilder.Entity("TestApp.Core.Postgres.Models.NewsEntity", b =>
+            modelBuilder.Entity("TestApp.DAL.Postgres.Models.NewsEntity", b =>
                 {
-                    b.HasOne("TestApp.Core.Postgres.Models.AuthorEntity", "Author")
+                    b.HasOne("TestApp.DAL.Postgres.Models.AuthorEntity", "Author")
                         .WithMany("News")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -69,7 +72,7 @@ namespace TestApp.Core.Postgres.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("TestApp.Core.Postgres.Models.AuthorEntity", b =>
+            modelBuilder.Entity("TestApp.DAL.Postgres.Models.AuthorEntity", b =>
                 {
                     b.Navigation("News");
                 });

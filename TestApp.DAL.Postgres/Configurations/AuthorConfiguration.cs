@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TestApp.Core.Postgres.Models;
+using TestApp.Domain.Models;
 
-namespace TestApp.Core.Postgres.Configurations
+namespace TestApp.DAL.Postgres.Configurations
 {
     public class AuthorConfiguration : IEntityTypeConfiguration<AuthorEntity>
     {

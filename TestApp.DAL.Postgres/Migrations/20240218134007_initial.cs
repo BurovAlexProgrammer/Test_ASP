@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace TestApp.Core.Postgres.Migrations
+namespace TestApp.DAL.Postgres.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration

@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.API", "TestApp.API\TestApp.API.csproj", "{E127B518-B4DE-4537-BB31-03AFE3EB64CE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Application", "TestApp.Application\TestApp.Application.csproj", "{7FF56855-E987-48D1-84B5-A672060A56C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Core", "TestApp.Core\TestApp.Core.csproj", "{8CB5E4EF-D727-4D5F-9066-5FAB2B5637CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Domain", "TestApp.Domain\TestApp.Domain.csproj", "{8CB5E4EF-D727-4D5F-9066-5FAB2B5637CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Core.Postgres", "TestApp.Core.Postgres\TestApp.Core.Postgres.csproj", "{C6C4E680-44BB-45AF-B66E-A121831679B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.DAL.Postgres", "TestApp.DAL.Postgres\TestApp.DAL.Postgres.csproj", "{C6C4E680-44BB-45AF-B66E-A121831679B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempConsole", "TempConsole\TempConsole.csproj", "{672A5BF6-B572-4CAA-9D87-BA4D8D51C16F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.API", "TestApp.API\TestApp.API.csproj", "{4AA64DFB-6572-4421-8956-129DE526DC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,10 +16,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E127B518-B4DE-4537-BB31-03AFE3EB64CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E127B518-B4DE-4537-BB31-03AFE3EB64CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E127B518-B4DE-4537-BB31-03AFE3EB64CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E127B518-B4DE-4537-BB31-03AFE3EB64CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7FF56855-E987-48D1-84B5-A672060A56C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FF56855-E987-48D1-84B5-A672060A56C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF56855-E987-48D1-84B5-A672060A56C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +28,13 @@ Global
 		{C6C4E680-44BB-45AF-B66E-A121831679B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6C4E680-44BB-45AF-B66E-A121831679B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6C4E680-44BB-45AF-B66E-A121831679B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672A5BF6-B572-4CAA-9D87-BA4D8D51C16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672A5BF6-B572-4CAA-9D87-BA4D8D51C16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672A5BF6-B572-4CAA-9D87-BA4D8D51C16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672A5BF6-B572-4CAA-9D87-BA4D8D51C16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA64DFB-6572-4421-8956-129DE526DC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA64DFB-6572-4421-8956-129DE526DC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA64DFB-6572-4421-8956-129DE526DC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA64DFB-6572-4421-8956-129DE526DC2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
